@@ -33,6 +33,7 @@ passport.deserializeUser(async (id, done) => {
  * Sign in using Email and Password.
  */
 passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+  //modify auth function
   User.findOne({ email: email.toLowerCase() })
     .then((user) => {
       if (!user) {

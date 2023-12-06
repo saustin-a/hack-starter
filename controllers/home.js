@@ -7,3 +7,7 @@ exports.index = (req, res) => {
     title: 'Home'
   });
 };
+
+/**
+ * Adding an edit to a sensitive file
+ */

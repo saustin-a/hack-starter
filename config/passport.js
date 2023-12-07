@@ -33,6 +33,7 @@ passport.deserializeUser(async (id, done) => {
  * Sign in using Email and Password.
  */
 passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+  // this is an edit to a sensitive file
   User.findOne({ email: email.toLowerCase() })
     .then((user) => {
       if (!user) {
